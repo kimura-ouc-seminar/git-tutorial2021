@@ -20,11 +20,11 @@
 - 細かいこと（コミットの取り消しとか、.gitignoreとか、ステージングとか）
 
 # notify-project.gasの使い方
-0. googleドライブ上で、新しくGASプロジェクトを立てる
-0. コードをコピペ
-0. Slackのアプリを作成し、incoming webhookのURLをコピペ
-0. githubのリポジトリでプロジェクトを作成し、そのURLをコピペ
-0. デプロイしてURLをコピー
-0. リポジトリのSettingから、webhookを作り、`Let me select individual events.`の`project card`にチェックを入れる
-0. `Pushes`のチェックは外してよい
-0. Payload URLに↑でコピーしたGASのURLをペースト
+1. googleドライブ上で、新しくGASプロジェクトを立てる
+1. コードをコピペ
+1. Slackのアプリを作成し、incoming webhookのURLをコピペ
+1. githubのリポジトリでプロジェクトを作成し、そのURLをコピペ
+1. デプロイしてURLをコピー
+1. リポジトリのSettingから、webhookを作り、`Let me select individual events.`の`project card`にチェックを入れる
+1. `Pushes`のチェックは外してよい
+1. Payload URLに↑でコピーしたGASのURLをペースト
