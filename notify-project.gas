@@ -1,0 +1,33 @@
+// slackに送信する関数
+function slack(message) {
+  // URLコピペその1
+  const url = '<slackのincoming webhookのURL>';
+  const method = 'post';
+
+  const payload = {
+    'text': message
+  }
+  const params = {
+    'method': method,
+    'contentType': 'application/json',
+    'payload': JSON.stringify(payload)
+  };
+
+  response = UrlFetchApp.fetch(url, params);
+}
+
+
+// POSTリクエストを受け取る
+function doPost(e) {
+  var data = JSON.parse(e.postData.getDataAsString());
+
+  // console.log(data);
+  const card_url = data.project_card.url
+  // URLのコピペその2(末尾の#catd-は消さないでね)
+  const edited_url = card_url.replace('https://api.github.com/projects/columns/cards/', '<プロジェクトのURL>#card-');
+  const note = data.project_card.note;
+  const sendData = `【更新】\n${note}\n${edited_url}`;
+  slack(sendData);
+
+  // return null;
+}

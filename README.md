@@ -19,4 +19,12 @@
 - Fork
 - 細かいこと（コミットの取り消しとか、.gitignoreとか、ステージングとか）
 
-ブランチ切った
+# notify-project.gasの使い方
+0. googleドライブ上で、新しくGASプロジェクトを立てる
+0. コードをコピペ
+0. Slackのアプリを作成し、incoming webhookのURLをコピペ
+0. githubのリポジトリでプロジェクトを作成し、そのURLをコピペ
+0. デプロイしてURLをコピー
+0. リポジトリのSettingから、webhookを作り、`Let me select individual events.`の`project card`にチェックを入れる
+0. `Pushes`のチェックは外してよい
+0. Payload URLに↑でコピーしたGASのURLをペースト
