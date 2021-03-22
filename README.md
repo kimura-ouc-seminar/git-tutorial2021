@@ -18,3 +18,5 @@
 - GitHub Actions
 - Fork
 - 細かいこと（コミットの取り消しとか、.gitignoreとか、ステージングとか）
+
+ブランチ切った
